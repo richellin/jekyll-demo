@@ -3,10 +3,10 @@
   <channel>
     <title>Kodeveloper</title>
     <description>일본에서 일하는 한국인 개발자 모임 | Kodeveloper</description>
-    <link>http://0.0.0.0:4000jekyll-demo/</link>
-    <atom:link href="http://0.0.0.0:4000jekyll-demo/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 29 Nov 2018 03:55:24 -0600</pubDate>
-    <lastBuildDate>Thu, 29 Nov 2018 03:55:24 -0600</lastBuildDate>
+    <link>http://0.0.0.0:4000/jekyll-demo/</link>
+    <atom:link href="http://0.0.0.0:4000/jekyll-demo/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 29 Nov 2018 03:59:18 -0600</pubDate>
+    <lastBuildDate>Thu, 29 Nov 2018 03:59:18 -0600</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -97,8 +97,8 @@
 &lt;p&gt;株式会社LIFULL&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Nov 2018 04:48:05 -0600</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/11/18/struggle-26/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/11/18/struggle-26/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/11/18/struggle-26/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/11/18/struggle-26/</guid>
         
         <category>architecture</category>
         
@@ -159,8 +159,8 @@
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Tue, 23 Oct 2018 07:18:21 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/10/23/struggle-25/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/10/23/struggle-25/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/10/23/struggle-25/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/10/23/struggle-25/</guid>
         
         <category>android</category>
         
@@ -222,8 +222,8 @@
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Aug 2018 07:31:07 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/21/struggle-24/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/21/struggle-24/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/21/struggle-24/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/21/struggle-24/</guid>
         
         <category>SRE</category>
         
@@ -290,8 +290,8 @@
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Mon, 06 Aug 2018 16:24:42 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-23/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-23/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-23/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-23/</guid>
         
         <category>ELK</category>
         
@@ -360,8 +360,8 @@
 &lt;p&gt;&lt;img src=&quot;http://kodeveloper.com/wp-content/uploads/2018/08/スクリーンショット-2018-08-07-6.08.55.png&quot; alt=&quot;スクリーンショット 2018-08-07 6.08.55&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 Aug 2018 16:10:34 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-22/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-22/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-22/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-22/</guid>
         
         <category>네이티브</category>
         
@@ -436,8 +436,8 @@
 &lt;p&gt;&lt;img src=&quot;https://lifull.com/wp-content/themes/lifull/img/logo.svg&quot; alt=&quot;LIFULL&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 May 2018 07:01:38 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/05/17/struggle-21/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/05/17/struggle-21/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/05/17/struggle-21/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/05/17/struggle-21/</guid>
         
         <category>haproxy</category>
         
@@ -507,8 +507,8 @@
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Thu, 19 Apr 2018 06:42:33 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/04/19/struggle-20/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/04/19/struggle-20/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/04/19/struggle-20/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/04/19/struggle-20/</guid>
         
         <category>polyglot</category>
         
@@ -633,8 +633,8 @@ https://bluemix.net
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Mar 2018 22:52:46 -0500</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/03/15/struggle-19/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/03/15/struggle-19/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/03/15/struggle-19/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/03/15/struggle-19/</guid>
         
         <category>db</category>
         
@@ -717,8 +717,8 @@ https://bluemix.net
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Sat, 17 Feb 2018 23:20:24 -0600</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/02/17/struggle-18/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/02/17/struggle-18/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/02/17/struggle-18/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/02/17/struggle-18/</guid>
         
         <category>chaosengineering</category>
         
@@ -810,8 +810,8 @@ https://bluemix.net
 &lt;p&gt;&lt;img src=&quot;http://kodeveloper.com/wp-content/uploads/2018/01/logo_primary_orange-300x225.png&quot; alt=&quot;logo_primary_orange&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 18 Jan 2018 07:18:16 -0600</pubDate>
-        <link>http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/01/18/struggle-17/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/01/18/struggle-17/</guid>
+        <link>http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/01/18/struggle-17/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/jekyll-demo/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/01/18/struggle-17/</guid>
         
         <category>encryption</category>
         
