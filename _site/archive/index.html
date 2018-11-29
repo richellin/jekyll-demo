@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+    <meta name="keywords"  content="일본에서 일하는 한국인 개발자 모임, Kodeveloper, 고군분투기">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Archive - 일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="고군분투기">
+    
+    <meta property="og:image" content="http://0.0.0.0:4000">
+    <meta property="og:url" content="http://0.0.0.0:4000/archive/">
+    <meta property="og:site_name" content="일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+
+    <title>Archive - 일본에서 일하는 한국인 개발자 모임 | Kodeveloper</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="/img/favicon.ico"> -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://0.0.0.0:4000/archive/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" href="/img/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/img/logo-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/img/logo-180x180.png" />
+    <meta name="msapplication-TileImage" content="/img/logo-270x270.png" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Kodeveloper</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/staff/">Staff</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!--
+Credits: this page shamelessly borrowed a lot from:
+https://github.com/kitian616/jekyll-TeXt-theme
+-->
+<!-- Page Header -->
+
+
+
+
+
+
+
+<header class="intro-header" style="background-image: url('/img/tag-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading" id="tag-heading">
+        
+          <h1>
+            Archive
+            
+          </h1>
+          <span class="subheading">고군분투기</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<!-- Tags (as filter) -->
+			<div id='tag_cloud' class="tags tags-sup js-tags">
+				<a class="tag-button--all" data-encode="">
+					Show All
+					<sup>26</sup>
+				</a>
+
+				
+        
+				
+				</a>
+				
+				<a data-sort="0009"
+					data-encode="kodeveloper"
+					class="tag-button"
+					title="kodeveloper" rel="17">
+					kodeveloper
+					<sup>17</sup>
+				</a>
+				
+				<a data-sort="0010"
+					data-encode="%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0"
+					class="tag-button"
+					title="고군분투기" rel="16">
+					고군분투기
+					<sup>16</sup>
+				</a>
+				
+				<a data-sort="0022"
+					data-encode="Struggle"
+					class="tag-button"
+					title="Struggle" rel="4">
+					Struggle
+					<sup>4</sup>
+				</a>
+				
+				<a data-sort="0024"
+					data-encode="ios"
+					class="tag-button"
+					title="ios" rel="2">
+					ios
+					<sup>2</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C"
+					class="tag-button"
+					title="네이티브" rel="1">
+					네이티브
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%82%AC%EC%9D%B4%EC%96%B8%ED%8B%B0%EC%8A%A4%ED%8A%B8"
+					class="tag-button"
+					title="데이터 사이언티스트" rel="1">
+					데이터 사이언티스트
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EB%94%94%EC%A7%80%ED%84%B8%ED%8F%AC%EB%A0%8C%EC%8B%9D"
+					class="tag-button"
+					title="디지털포렌식" rel="1">
+					디지털포렌식
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84"
+					class="tag-button"
+					title="분산서버" rel="1">
+					분산서버
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%84%B0"
+					class="tag-button"
+					title="양자컴퓨터" rel="1">
+					양자컴퓨터
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EC%9B%B9%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC"
+					class="tag-button"
+					title="웹어셈블리" rel="1">
+					웹어셈블리
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="%EC%BB%A8%EC%84%A4%ED%8C%85"
+					class="tag-button"
+					title="컨설팅" rel="1">
+					컨설팅
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="ELK"
+					class="tag-button"
+					title="ELK" rel="1">
+					ELK
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="GDPR"
+					class="tag-button"
+					title="GDPR" rel="1">
+					GDPR
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="SRE"
+					class="tag-button"
+					title="SRE" rel="1">
+					SRE
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="android"
+					class="tag-button"
+					title="android" rel="1">
+					android
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="architecture"
+					class="tag-button"
+					title="architecture" rel="1">
+					architecture
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="chaosengineering"
+					class="tag-button"
+					title="chaosengineering" rel="1">
+					chaosengineering
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="chrome"
+					class="tag-button"
+					title="chrome" rel="1">
+					chrome
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="db"
+					class="tag-button"
+					title="db" rel="1">
+					db
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="encryption"
+					class="tag-button"
+					title="encryption" rel="1">
+					encryption
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="hacking"
+					class="tag-button"
+					title="hacking" rel="1">
+					hacking
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="haproxy"
+					class="tag-button"
+					title="haproxy" rel="1">
+					haproxy
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="introduction"
+					class="tag-button"
+					title="introduction" rel="1">
+					introduction
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="kubernetes"
+					class="tag-button"
+					title="kubernetes" rel="1">
+					kubernetes
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="mobile"
+					class="tag-button"
+					title="mobile" rel="1">
+					mobile
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="nikon"
+					class="tag-button"
+					title="nikon" rel="1">
+					nikon
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="oracle"
+					class="tag-button"
+					title="oracle" rel="1">
+					oracle
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="polyglot"
+					class="tag-button"
+					title="polyglot" rel="1">
+					polyglot
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="postgresql"
+					class="tag-button"
+					title="postgresql" rel="1">
+					postgresql
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="quantum"
+					class="tag-button"
+					title="quantum" rel="1">
+					quantum
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="selenide"
+					class="tag-button"
+					title="selenide" rel="1">
+					selenide
+					<sup>1</sup>
+				
+			</div>
+
+            <!-- Article List -->
+			<div class="mini-post-list js-result d-none"><section>
+				<span class="fa listing-seperator">
+					<span class="tag-text">2018</span>
+				</span><div class="post-preview item" data-tags="architecture">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/11/18/struggle-26/">
+				        <h2 class="post-title">
+                            제26차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="android,ios,mobile">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/10/23/struggle-25/">
+				        <h2 class="post-title">
+                            제25차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="SRE">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/21/struggle-24/">
+				        <h2 class="post-title">
+                            제24차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="ELK,GDPR">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-23/">
+				        <h2 class="post-title">
+                            제23차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C,%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%82%AC%EC%9D%B4%EC%96%B8%ED%8B%B0%EC%8A%A4%ED%8A%B8,%EC%BB%A8%EC%84%A4%ED%8C%85">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/08/06/struggle-22/">
+				        <h2 class="post-title">
+                            제22차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="haproxy,%EB%94%94%EC%A7%80%ED%84%B8%ED%8F%AC%EB%A0%8C%EC%8B%9D,%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84,%EC%9B%B9%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/05/17/struggle-21/">
+				        <h2 class="post-title">
+                            제21차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="polyglot">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/04/19/struggle-20/">
+				        <h2 class="post-title">
+                            제20차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="db,ios,quantum,selenide,%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%84%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/03/15/struggle-19/">
+				        <h2 class="post-title">
+                            제19차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="chaosengineering,chrome,oracle,Struggle">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/02/17/struggle-18/">
+				        <h2 class="post-title">
+                            제18차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="encryption,hacking,introduction,kodeveloper,kubernetes,nikon,postgresql">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2018/01/18/struggle-17/">
+				        <h2 class="post-title">
+                            제17차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			</section><section>
+				<span class="fa listing-seperator">
+					<span class="tag-text">2017</span>
+				</span><div class="post-preview item" data-tags="kodeveloper,Struggle,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/11/16/struggle-16/">
+				        <h2 class="post-title">
+                            제16차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,Struggle,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/19/struggle-15/">
+				        <h2 class="post-title">
+                            제15차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,Struggle,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-14/">
+				        <h2 class="post-title">
+                            제14차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-13/">
+				        <h2 class="post-title">
+                            제13차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-12/">
+				        <h2 class="post-title">
+                            제12차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/08/28/struggle-11/">
+				        <h2 class="post-title">
+                            제11차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/05/18/struggle-10/">
+				        <h2 class="post-title">
+                            제10차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/04/16/struggle-9/">
+				        <h2 class="post-title">
+                            제9차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/03/19/struggle-8/">
+				        <h2 class="post-title">
+                            제8차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/02/23/struggle-7/">
+				        <h2 class="post-title">
+                            제7차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/01/19/struggle-6/">
+				        <h2 class="post-title">
+                            제6차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			</section><section>
+				<span class="fa listing-seperator">
+					<span class="tag-text">2016</span>
+				</span><div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2016/12/24/struggle-5/">
+				        <h2 class="post-title">
+                            제5차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2016/11/28/struggle-4/">
+				        <h2 class="post-title">
+                            제4차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2016/10/21/struggle-3/">
+				        <h2 class="post-title">
+                            제3차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2016/08/29/struggle-2/">
+				        <h2 class="post-title">
+                            제2차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			<div class="post-preview item" data-tags="kodeveloper,%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0">
+				    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2016/08/14/struggle-1/">
+				        <h2 class="post-title">
+                            제1차 고군분투기
+				        </h2>
+				        
+				    </a>
+					<hr>
+				</div>
+			
+		</div>
+	</div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  <li>
+    <a target="_blank" href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/groups/1726012127643525">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/kodevops">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://goo.gl/5czniN">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-slack fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Kodeveloper 2018
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    async('/js/jquery.tagcloud.js',function(){
+        $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {start: '#bbbbee', end: '#2f93b4'},
+        };
+        $('#tag_cloud a').tagcloud();
+    })
+</script>
+<script src='/js/archive.js '></script>
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-82488408-1';
+    var _gaDomain = 'kodeveloper.com';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

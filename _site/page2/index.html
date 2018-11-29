@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+    <meta name="keywords"  content="일본에서 일하는 한국인 개발자 모임, Kodeveloper, 고군분투기">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Kodeveloper">
+    
+    <meta property="og:image" content="http://0.0.0.0:4000">
+    <meta property="og:url" content="http://0.0.0.0:4000/page2/">
+    <meta property="og:site_name" content="일본에서 일하는 한국인 개발자 모임 | Kodeveloper">
+
+    <title>일본에서 일하는 한국인 개발자 모임 | Kodeveloper</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="/img/favicon.ico"> -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://0.0.0.0:4000/page2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" href="/img/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/img/logo-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/img/logo-180x180.png" />
+    <meta name="msapplication-TileImage" content="/img/logo-270x270.png" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Kodeveloper</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/staff/">Staff</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Page Header -->
+
+
+
+
+
+
+
+<header class="intro-header" style="background-image: url('/img/home-bg.png')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading">
+        
+          <h1>
+            일본에서 일하는 한국인 개발자 모임
+            
+          </h1>
+          <span class="subheading">Kodeveloper</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                postlist-container
+            ">
+    			
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/11/16/struggle-16/">
+        <h2 class="post-title">
+            제16차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제16차 Kodeveloper 고군분투기
+일시 : 2017년11월16일 20시 00분
+
+발표자
+
+@tsukiwamoon :도쿄 디즈니 리조트 살펴보기
+@manggu :ELK
+@daebum-lee :owasp zap 고군분투기
+@June :언어학도에서 AI엔지니어가 되기까지
+
+발표 자료
+
+@tsukiwamoon :도쿄 디즈니 리조트 ...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on November 16, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/19/struggle-15/">
+        <h2 class="post-title">
+            제15차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제15차 Kodeveloper 고군분투기
+일시 : 2017년10월19일 20시 00분
+장소 : 라인
+
+발표자
+
+@sangjun : Resize EBS(Amazon Elastic Block Store)
+@ninetin : DDD(Domain Driven Design)
+@rickyl1126 : Bad Practices using BLE...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on October 19, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-14/">
+        <h2 class="post-title">
+            제14차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제14차 Kodeveloper 고군분투기
+일시 : 2017년09월21일 20시 00분
+장소 : 라쿠텐
+
+발표자
+
+@doil6317 : ARKit + Unity를 이용한 iOS AR어플개발(Demo)
+@tsukiwamoon : PostgreSQL 내부 맛보기
+@daebum-lee : 클라우드 마이닝 맛보기
+
+발표 자료
+
+@doil63...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on October 10, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-13/">
+        <h2 class="post-title">
+            제13차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제13차 Kodeveloper 고군분투기
+일시 : 2017년08월24일 20시 00분
+장소 : PR TIMES
+
+발표자
+
+@lee19 :  spotinst로 spot instance를 사용해서 AWS 비용 절감하기
+@doil6317 : ARKit + Unity를 이용한 iOS AR어플개발
+
+발표 자료
+
+@lee19 :spotinst...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on October 10, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/10/10/struggle-12/">
+        <h2 class="post-title">
+            제12차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제12차 Kodeveloper 고군분투기
+일시 : 2017/07/22 (土) 15:30～18:30
+장소 : 株式会社FreakOut
+
+발표자
+
+@oz-dev : AWSKRUG도쿄지부 활동
+@sangjun : 데이터로 보는 고군분투기
+@fish : 자작DB
+
+타임테이블/발표자료
+
+15:00 입장시작
+
+1부 시작 (고군분투기LT)
+ 15...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on October 10, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/08/28/struggle-11/">
+        <h2 class="post-title">
+            제11차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제11차 Kodeveloper 고군분투기
+일시 : 2017년06월15일 20시 00분
+장소 : GROOVE X 株式会社
+
+발표자
+
+@manggu : Blockchain 살짝 찔러 보기
+@msna : 엔지니어의 책정리
+@fish : 동적 프로그래밍
+
+발표 자료
+
+@manggu : Blockchain 살짝 찔러 보기
+
+
+
+※ 아쉽지만 ...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on August 28, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/05/18/struggle-10/">
+        <h2 class="post-title">
+            제10차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제10차 Kodeveloper 고군분투기
+일시 : 2017년05월19일 20시 00분
+장소 : CyberAgent
+
+발표자
+
+@tsukiwamoon : 방송시스템
+@haneri : Taxi &amp; Ad Tech
+@jeongwon : 실무 딥러닝
+
+발표 자료
+
+@tsukiwamoon:방송시스템
+
+각 방송시스템에 따른 스펙 및 어떻...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on May 18, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/04/16/struggle-9/">
+        <h2 class="post-title">
+            제9차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제9차 Kodeveloper 고군분투기
+일시 : 2017년04월14일 20시 30분
+장소 : Investors Cloud
+
+발표자
+
+@yaksaa21 : Reactive &amp; java
+@sangjun : Revien - 개인 프로젝트  
+@oz-dev : AWS CloudFront - 낮은 비용으로 운영하기
+
+발표 자료
+
+@y...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on April 16, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/03/19/struggle-8/">
+        <h2 class="post-title">
+            제8차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제8차 Kodeveloper 고군분투기
+일시 : 2017년03월15일 20시 00분
+장소 : Wanted(일본 지사)
+
+발표자
+
+@riverleo: 사내 시스템 소개
+@nari: 비공개
+@laby0525: 일본 문과생은 어떻게 살아남나? 그리고 채용에 관해 
+@jun: About E-Mail
+
+발표 자료
+
+@riverleo: 사내 ...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on March 19, 2017
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2017/02/23/struggle-7/">
+        <h2 class="post-title">
+            제7차 고군분투기
+        </h2>
+        
+        <div class="post-content-preview">
+            
+                
+
+일정
+
+제목 : 제7차 Kodeveloper 고군분투기
+일시 : 2017년02월20일 20시 00분
+장소 : FreakOut
+
+발표자
+
+@younghoon: GC이야기
+@youngmo: 슬랙과 커뮤니티, 그리고 봇에 관한 이야기
+@negabaro: docker/aws/rails를 이용한 시스템 구축/운용
+
+발표 자료
+
+@younghoon: GC이야...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by kodeveloper on February 23, 2017
+    </p>
+</div>
+<hr>
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/">&larr; Newer Posts</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/page3">Older Posts &rarr;</a>
+    </li>
+    
+</ul>
+
+
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0009" 
+                    href="/archive/?tag=kodeveloper"
+                    title="kodeveloper"
+                    rel="17">kodeveloper</a>
+        
+                <a data-sort="0010" 
+                    href="/archive/?tag=%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0"
+                    title="고군분투기"
+                    rel="16">고군분투기</a>
+        
+                <a data-sort="0022" 
+                    href="/archive/?tag=Struggle"
+                    title="Struggle"
+                    rel="4">Struggle</a>
+        
+                <a data-sort="0024" 
+                    href="/archive/?tag=ios"
+                    title="ios"
+                    rel="2">ios
+    </div>
+</section>
+
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+  <hr>
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+    
+    
+    <!-- SNS Link -->
+    
+
+
+<ul class="list-inline">
+
+
+  
+  <li>
+    <a target="_blank" href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/groups/1726012127643525">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/kodevops">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://goo.gl/5czniN">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-slack fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+
+  </div>
+</section>
+
+                <!-- Friends Blog -->
+                
+    		</div>
+        
+	</div>
+</div>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  <li>
+    <a target="_blank" href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/groups/1726012127643525">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/kodevops">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://goo.gl/5czniN">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-slack fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Kodeveloper 2018
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-82488408-1';
+    var _gaDomain = 'kodeveloper.com';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
